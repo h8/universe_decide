@@ -9,5 +9,18 @@ module.exports = {
 
   plugins: [
     new CopyWebpackPlugin([{from: __dirname + "/assets/static"}])
-  ]
+  ],
+
+  module: {
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: "babel-loader",
+        query: {
+          presets: ["env", "react"]
+        }
+      }
+    ]
+  }
 };
