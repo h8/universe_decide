@@ -1,0 +1,16 @@
+{
+  "name": "univdependency",
+  "version": "0.1.0",
+  "description": "Universe Decide application",
+  "author": "Dmitry Stropalov <d.stropalov@gmail.com>",
+  "license": "Proprietary",
+  "private": true,
+
+  "scripts": {
+    "watch": "webpack --watch-stdin --progress --color"
+  },
+
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  }
+}
