@@ -10,13 +10,13 @@
   </head>
 
   <body>
-    <div class="container">
+    <div>
 
       <main role="main">
         <%= render @view_module, @view_template, assigns %>
       </main>
 
     </div> <!-- /container -->
-    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+    <%= render_existing @view_module, "scripts.html", assigns %>
   </body>
 </html>
