@@ -1,25 +1,18 @@
-const changeCount = (count) => ({
+export const changeCount = (count) => ({
   type: 'CHANGE_COUNT',
   count: Number(count)
 });
 
-const changeFrom = (from) => ({
+export const changeFrom = (from) => ({
   type: 'CHANGE_FROM',
   from: Number(from)
 });
 
-const changeTo = (to) => ({
+export const changeTo = (to) => ({
   type: 'CHANGE_TO',
   to: Number(to)
 });
 
-const doClick = () => ({
+export const doClick = () => ({
   type: 'DO_CLICK'
 });
-
-export {
-  changeCount,
-  changeFrom,
-  changeTo,
-  doClick
-};
