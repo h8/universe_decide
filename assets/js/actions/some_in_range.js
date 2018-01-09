@@ -2,17 +2,17 @@ import {getSomeInRange} from "../randomizers";
 
 export const changeCount = (count) => ({
   type: 'CHANGE_COUNT',
-  count: Number(count)
+  count
 });
 
 export const changeFrom = (from) => ({
   type: 'CHANGE_FROM',
-  from: Number(from)
+  from
 });
 
 export const changeTo = (to) => ({
   type: 'CHANGE_TO',
-  to: Number(to)
+  to
 });
 
 const setResult = (result) => ({

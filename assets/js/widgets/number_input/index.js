@@ -6,12 +6,11 @@ export default class NumberInput extends React.Component {
 
   static defaultProps = {
     value: 0,
-    onChange: () => {}
   };
 
   static propTypes = {
     value: PropTypes.number,
-    onChange: PropTypes.func
+    onChange: PropTypes.func.isRequired
   };
 
   render() {
@@ -22,5 +21,5 @@ export default class NumberInput extends React.Component {
                   onChange={this.changed}/>;
   }
 
-  changed = event => this.props.onChange(event.target.value);
+  changed = event => this.props.onChange(+event.target.value);
 }
