@@ -1,4 +1,4 @@
-import {getSomeInRange} from "../randomizers";
+import {getSomeInRange} from "../libs/randomizers";
 
 export const changeCount = (count) => ({
   type: 'CHANGE_COUNT',

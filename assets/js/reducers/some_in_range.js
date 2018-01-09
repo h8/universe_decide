@@ -1,5 +1,3 @@
-import {getSomeInRange} from '../randomizers';
-
 const defaultState = {
   count: 1,
   from: 1,
