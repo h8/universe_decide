@@ -1,3 +1,5 @@
+import {getSomeInRange} from "../randomizers";
+
 export const changeCount = (count) => ({
   type: 'CHANGE_COUNT',
   count: Number(count)
@@ -13,6 +15,16 @@ export const changeTo = (to) => ({
   to: Number(to)
 });
 
-export const doClick = () => ({
-  type: 'DO_CLICK'
+const setResult = (result) => ({
+  type: 'SET_RESULT',
+  result
 });
+
+export const doClick = () => {
+  return (dispatch, getState) => {
+    const {count, from, to} = getState();
+    const result = getSomeInRange(count, from, to);
+
+    dispatch(setResult(result));
+  };
+};

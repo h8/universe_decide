@@ -27,9 +27,8 @@ export default (state = defaultState, action) => {
       } else {
         return state;
       }
-    case 'DO_CLICK':
-      const {count, from, to} = state;
-      return Object.assign({}, state, {result: getSomeInRange(count, from, to)});
+    case 'SET_RESULT':
+      return Object.assign({}, state, {result: action.result});
     default:
       return state;
   }
