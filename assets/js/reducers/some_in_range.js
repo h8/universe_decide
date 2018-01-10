@@ -9,24 +9,24 @@ export default (state = defaultState, action) => {
   switch (action.type) {
     case 'CHANGE_COUNT':
       if (action.count > 0) {
-        return Object.assign({}, state, {count: action.count})
+        return {...state, count: action.count};
       } else {
         return state;
       }
     case 'CHANGE_FROM':
       if (action.from < state.to) {
-        return Object.assign({}, state, {from: action.from})
+        return {...state, from: action.from};
       } else {
         return state;
       }
     case 'CHANGE_TO':
       if (action.to > state.from) {
-        return Object.assign({}, state, {to: action.to})
+        return {...state, to: action.to};
       } else {
         return state;
       }
     case 'SET_RESULT':
-      return Object.assign({}, state, {result: action.result});
+      return {...state, result: action.result};
     default:
       return state;
   }
