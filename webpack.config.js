@@ -1,4 +1,4 @@
-const CopyWebpackPlugin =possibilitycopy-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: __dirname + "/assets/js/app.js",
