@@ -48,6 +48,13 @@ module.exports = {
             loader: "postcss-loader"
           }
         ]
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: "file-loader",
+        options: {
+          outputPath: "/images/",
+        }
       }
     ]
   }
