@@ -3,6 +3,11 @@
     "<rootDir>/assets/js/tests/setup.js"
   ],
 
+  "moduleNameMapper": {
+    "\\.(png|jpg)$": "<rootDir>/assets/js/tests/mock_images.js",
+    "\\.css$": "identity-obj-proxy"
+  },
+
   "transform": {
     "^.+\\.js$": "babel-jest"
   },
