@@ -1,4 +1,4 @@
-const CopyWebpackPlugin = require("copy-webpack-plugin");
+const CopyWebpackPlugin =possibilitycopy-webpack-plugin");
 
 module.exports = {
   entry: __dirname + "/assets/js/app.js",
@@ -26,6 +26,28 @@ module.exports = {
         options: {
           configPath: __dirname + "/.eslintrc.js"
         }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: "style-loader",
+            options: {
+              sourceMap: true,
+            }
+          },
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+              importLoaders: 1,
+              localIdentName: "[path]___[name]__[local]___[hash:base64:5]"
+            }
+          },
+          {
+            loader: "postcss-loader"
+          }
+        ]
       }
     ]
   }

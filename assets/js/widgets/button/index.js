@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import styles from './button.css';
+
 class Button extends React.Component {
   static displayName = "Button";
 
@@ -16,7 +18,7 @@ class Button extends React.Component {
   render() {
     const {caption, onClick} = this.props;
     return (
-      <button onClick={onClick}>{caption}</button>
+      <button className={styles.element} onClick={onClick}>{caption}</button>
     );
   }
 }
