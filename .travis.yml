@@ -1,0 +1,9 @@
+language: elixir
+elixir: '1.5.3'
+otp_release: '20.2'
+
+services:
+  - postgresql
+
+before_script:
+  - createuser -U postgres -s universe_decide
