@@ -1,9 +1,15 @@
-language: elixir
-elixir: '1.5.3'
-otp_release: '20.2'
+matrix:
+  include:
+    - language: elixir
+      elixir: '1.5.3'
+      otp_release: '20.2'
+      services:
+        - postgresql
+      before_script:
+        - createuser -U postgres -s universe_decide
 
-services:
-  - postgresql
-
-before_script:
-  - createuser -U postgres -s universe_decide
+    - language: node_js
+      node_js:
+        - "node"
+      cache:
+        yarn: true
