@@ -8,7 +8,9 @@
   "scripts": {
     "watch": "webpack --watch-stdin --progress --color",
     "test": "jest --config ./.jest.json",
-    "lint": "eslint -c .eslintrc.js  assets/js"
+    "lint": "eslint -c .eslintrc.js  assets/js",
+    "build": "webpack -d --color",
+    "build:production": "NODE_ENV=production webpack -p --color"
   },
   "devDependencies": {
     "@types/jest": "^22.0.1",
