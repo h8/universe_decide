@@ -1,5 +1,7 @@
 # UniverseDecide
 
+[![Build Status](https://travis-ci.org/h8/universe_decide.svg?branch=develop)](https://travis-ci.org/h8/universe_decide)
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
